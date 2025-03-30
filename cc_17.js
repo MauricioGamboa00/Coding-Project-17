@@ -127,3 +127,8 @@ VIPCustomer2.addPurchase(150); // adding a purchase to purchase history for VIP 
 
 console.log(VIPCustomer1.getDetails()); // Logging the VIP customer 1 details to the console
 console.log(VIPCustomer2.getDetails()); // Logging the VIP customer 2 details to the console
+
+salesRep.addClient(VIPCustomer1); // Added  Vip Customer 1 to the Sales Rep
+salesRep.addClient(VIPCustomer2); // Added  Vip Customer 2 to the Sales Rep
+
+
