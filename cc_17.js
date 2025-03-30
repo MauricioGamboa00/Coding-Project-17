@@ -88,3 +88,42 @@ salesRep.addClient(customer3); // Adding customer 3 to the Sales Rep
 console.log(salesRep.getDetails()); // Logging the Sales Rep Details to the console
 console.log(salesRep.getClientTotal("Tony Hawk")); // Logging how much Tony Hawk has spent
 
+// Task 3 Create a VIPCustomer Class
+
+class VIPCustomer extends Customer{
+    constructor(name, email, vipLevel){
+        super(name, email); // Calling the Customer class constructor
+        this.vipLevel = vipLevel; // VIP level for Vip Customers
+        this.purchaseHistory = []; // VIP Customer Purchase History
+    }
+
+   // Function to get Vip Customer Details
+   getDetails() {
+    return `VIP Customer Name: ${this.name}, VIP Email: ${this.email}, VIP Level: ${this.vipLevel}, Total Spent: $${this.getTotalSpent()}`
+
+   }
+
+   // Function to override get total spent to include a 10% bonus
+   getTotalSpent(){
+    const totalSpent = super.getTotalSpent();
+    return totalSpent + (totalSpent * 0.1); // Adding the 10% Loyalty bonus to the total spent
+   }
+
+   
+
+
+
+   
+
+}
+
+const VIPCustomer1 = new VIPCustomer("Steve Jobs", "SteveAppleOG@gmail.com", "Platinum"); // Creating a new VIP Customer
+const VIPCustomer2 = new VIPCustomer("Bill Gates", "GatesMicro@gmail.com", "Gold"); // Creating a new VIP Customer
+
+VIPCustomer1.addPurchase(1000); // adding a purchase to purchase history for VIP customer 1
+VIPCustomer1.addPurchase(1500); // adding a purchase to purchase history for VIP customer 1
+VIPCustomer2.addPurchase(150); // adding a purchase to purchase history for VIP customer 2
+VIPCustomer2.addPurchase(150); // adding a purchase to purchase history for VIP customer 2
+
+console.log(VIPCustomer1.getDetails()); // Logging the VIP customer 1 details to the console
+console.log(VIPCustomer2.getDetails()); // Logging the VIP customer 2 details to the console
