@@ -62,7 +62,7 @@ class SalesRep{
 
     // Function to add clients to client list
     addClient(customer) {
-        this.clients.push(customer); // Adding Customer 1 to the sales Rep
+        this.clients.push(customer);
     }
 
     // Function to get Client Name and total the client spent
@@ -87,3 +87,4 @@ salesRep.addClient(customer3); // Adding customer 3 to the Sales Rep
 
 console.log(salesRep.getDetails()); // Logging the Sales Rep Details to the console
 console.log(salesRep.getClientTotal("Tony Hawk")); // Logging how much Tony Hawk has spent
+
