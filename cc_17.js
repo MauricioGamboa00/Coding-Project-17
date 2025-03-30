@@ -46,4 +46,44 @@ console.log(customer2.getDetails()) // Logging the customer details to the conso
 console.log(customer3.getDetails()) // Logging the customer details to the console
 
 
+// Task 2 Create a SalesRep Class
 
+class SalesRep{
+    constructor(name) {
+        this.name = name; // Sales Rep Name
+        this.clients = []; // Array Of Clients
+    }
+
+    // Function to get Sales Rep Details
+    getDetails() {
+    const totalClientSpent = this.clients.reduce((total, client) => total + client.getTotalSpent(), 0);
+    return `Sales Rep Name: ${this.name}, Total Clients Spent: $${totalClientSpent}`;
+    }
+
+    // Function to add clients to client list
+    addClient(customer) {
+        this.clients.push(customer); // Adding Customer 1 to the sales Rep
+    }
+
+    // Function to get Client Name and total the client spent
+    getClientTotal(name) {
+        const client = this.clients.find(customer => customer.name === name);
+        if (client) {
+           return `${client.name} has spent $${client.getTotalSpent()}`; // If the client is found log this to console
+        } else {
+           return `Client not found.`; // If the client is not found log this message to console
+        }
+     }
+  }  
+    
+
+
+
+const salesRep = new SalesRep("Sarah Connor"); // Creating a new Sales Rep
+
+salesRep.addClient(customer1); // Adding customer 1 to the Sales Rep
+salesRep.addClient(customer2); // Adding customer 2 to the Sales Rep
+salesRep.addClient(customer3); // Adding customer 3 to the Sales Rep
+
+console.log(salesRep.getDetails()); // Logging the Sales Rep Details to the console
+console.log(salesRep.getClientTotal("Tony Hawk")); // Logging how much Tony Hawk has spent
