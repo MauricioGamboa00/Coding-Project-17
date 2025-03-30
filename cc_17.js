@@ -24,10 +24,26 @@ getTotalSpent(){
 
 }
 
-const customer = new Customer("Tony Hawk", "TonyHawk100@gmail.com"); // Creating a new customer
+const customer1 = new Customer("Tony Hawk", "TonyHawk100@gmail.com"); // Creating a new customer
 
-customer.addPurchase(100); // Adding a purchase to purchase history
-customer.addPurchase(40); // Adding a purchase to purchase history
-customer.addPurchase(300); // Adding a purchase to purchase history
+const customer2 = new Customer("Hank Hill", "GrillMaster200@gmail.com") // Creating a new customer
 
-console.log(customer.getDetails()) // Logging the customer details to the console
+const customer3 = new Customer ("Lebron James", "KingJames@gmail.com") // Creating a new customer
+
+customer1.addPurchase(100); // Adding a purchase to purchase history for customer 1
+customer1.addPurchase(40); // Adding a purchase to purchase history for customer 1
+customer1.addPurchase(300); // Adding a purchase to purchase history for customer 1
+
+customer2.addPurchase(50); // Adding a purchase to purchase history for customer 2
+customer2.addPurchase(190); // Adding a purchase to purchase history for customer 2
+
+customer3.addPurchase(1500); // Adding a purchase to purchase history for customer 3
+customer3.addPurchase(500); // Adding a purchase to purchase history for customer 3
+customer3.addPurchase(100); // Adding a purchase to purchase history for customer 2
+
+console.log(customer1.getDetails()) // Logging the customer details to the console
+console.log(customer2.getDetails()) // Logging the customer details to the console
+console.log(customer3.getDetails()) // Logging the customer details to the console
+
+
+
